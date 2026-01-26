@@ -1,64 +1,24 @@
----
-layout: archive
-title: "CV"
-permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
----
+# H.N Jithun Methusahan
+High School Student | Python developer | Open source contributor | Machine Learning Enthusiast | Technical writer | Aspiring AI researcher
 
-{% include base_path %}
+| **Contact** | |
+| :--- | :--- |
+| **LinkedIn:** | https://www.linkedin.com/in/jithunmethusahan/ |
+| **GitHub:** | https://github.com/JithunMethusahan/ |
+| **Medium:** | jithunmethusahan.medium.com |
+| **Location:** | Sri Lanka |
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## About
+Jithun is a 14-year-old AI enthusiast and budding programmer from Sri Lanka. He is deeply involved in building AI-powered applications, such as intelligent autonomous agents and custom wallpaper generators. His goal is to continue learning, grow his skills, and contribute to the AI community with impactful projects.
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+## Skills Summary
+*   **Languages/Tools:** Python, HTML, CSS, JavaScript (used in projects)
+*   **Fields:** Artificial Intelligence, Machine Learning, Automation, Software Development, Technical Writing
+*   **Soft Skills:** Problem-solving, innovative thinking, collaboration, eager to learn
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Projects
+*   **AI-KIT:** An open-source, premade AI-CHATBOT designed for easy integrations into websites using HTML, CSS, and JS.
+*   **AI-powered applications:** Built intelligent autonomous agents and custom wallpaper generators.
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Certifications & Awards
+*   **Finalist: Youth Computer Scientist (YCS):** Achieved finalist status in the Young Coders Summit (YCS) after intensive preparation and competitive coding.
