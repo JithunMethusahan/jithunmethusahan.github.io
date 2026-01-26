@@ -22,16 +22,15 @@ repository: "JithunMethusahan/jithunmethusahan.github.io"
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
-author:
+author: "Jithun Methusahan"
   # Biographic information
   avatar: "profile.png"
   name: "Jithun Methusahan"
   pronouns: # example: "she/her"
   bio: "AI Developer & UI/UX Designer from Sri Lanka, passionate about creating intelligent applications and intuitive user experiences."
   location: "Sri Lanka"
-  employer: ""
   uri: "https://jithunmethusahan.vercel.app" # URL
-  email: "warunimanike8@gmail.com"
+  email: "warunimanike8@gmail.com "
 
   # Repositories and software development
   github: "Jithun Methusahan"
@@ -56,7 +55,7 @@ talkmap_link: false #change to true to add link to talkmap on talks page
 comments:
   provider: # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname:
+    shortname: "JEX"
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -89,21 +88,6 @@ bing_site_verification:
 alexa_site_verification:
 yandex_site_verification:
 
-# Social Sharing
-twitter:
-  username: &twitter
-facebook:
-  username:
-  app_id:
-  publisher:
-og_image: # Social media default site image
-og_description: # Social media default site image description
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type: # Person or Organization (defaults to Person)
-  name: # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
 
 # Analytics
 analytics:
