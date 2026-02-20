@@ -6,8 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
-##About Me
+## About Me
 
 With 3+ years of experience and 10+ projects built, I'm constantly pushing the boundaries of what's possible with AI and modern web technologies. 
 
