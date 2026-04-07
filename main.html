@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jithun Methusahan</title>
+  <meta name="description" content="Programmer, reader,">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Solarized Light Theme mapping */
+      --bg-color: #fdf6e3;
+      --text-color: #586e75;
+      --heading-color: #586e75;
+      --link-color: #268bd2;
+      --link-hover: #1c6ba0;
+      
+      /* Exact Bullet Colors */
+      --bullet-green: #859900;
+      --bullet-pink: #d33682;
+      --bullet-blue: #268bd2;
+      
+      --selection-bg: #268bd2;
+      --selection-color: #fdf6e3;
+    }
+
+    body.dark-mode {
+      /* Solarized Dark Theme */
+      --bg-color: #002b36;
+      --text-color: #839496;
+      --heading-color: #93a1a1;
+      --link-color: #2aa198;
+      --link-hover: #268bd2;
+      --selection-bg: #2aa198;
+      --selection-color: #002b36;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Source Code Pro', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      font-size: 14px; 
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    ::selection {
+      background-color: var(--selection-bg);
+      color: var(--selection-color);
+    }
+
+    h1 {
+      font-size: 16px; 
+      color: var(--heading-color);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 14px;
+      color: var(--heading-color);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .toggle {
+      cursor: pointer;
+      font-weight: 700;
+      margin-right: 5px;
+      user-select: none;
+    }
+    .toggle:hover { color: var(--link-color); }
+    .section-content { display: block; }
+
+    /* =========================================
+       UNIVERSAL GRID & BULLET LAYOUT
+       ========================================= */
+    .grid-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; 
+    }
+
+    .grid-row {
+      display: grid;
+      grid-template-columns: 25px 220px 1fr;
+      align-items: start;
+    }
+
+    /* 
+      Perfect Bullet Alignment: 
+      Forces the container height to exactly match 1 line of text (1.6em)
+      and centers the bullet perfectly in the middle of it.
+    */
+    .bullet-container {
+      height: 1.6em; 
+      display: flex;
+      align-items: center; 
+    }
+
+    .bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    
+    .bullet.green { background-color: var(--bullet-green); }
+    .bullet.pink { background-color: var(--bullet-pink); }
+    .bullet.blue { background-color: var(--bullet-blue); }
+
+    .grid-title {
+      font-weight: 400;
+      color: var(--text-color);
+    }
+
+    .grid-desc {
+      color: var(--text-color);
+    }
+
+    .grid-desc p {
+      margin-bottom: 20px;
+    }
+    .grid-desc p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================================
+       FOOTER & ICONS
+       ========================================= */
+    footer {
+      margin-top: 45px; /* Matched the exact gap from the screenshot */
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .social-links a, .social-links span {
+      color: var(--link-color);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-links a:hover {
+      color: var(--link-hover);
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+
+    .social-links svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    #theme-toggle {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+      width: fit-content;
+    }
+
+    #theme-toggle:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 650px) {
+      .grid-row {
+        grid-template-columns: 25px 1fr;
+        gap: 8px;
+      }
+      .grid-title { grid-column: 2 / 3; font-weight: 600; margin-bottom: 4px; }
+      .grid-desc { grid-column: 2 / 3; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jithun Methusahan</h1>
+    <p>Programmer, reader,</p>
+  </header>
+
+  <main>
+    <!-- README SECTION -->
+    <section>
+      <h2><span class="toggle">[-]</span> README.md</h2>
+      <div class="section-content">
+        <div class="grid-list">
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet blue"></span></div>
+            <div class="grid-title">What I do</div>
+            <div class="grid-desc">
+              <p>A student who make software that makes life easier, now with a focus on integrating Machine Learning for smarter results.</p>
+              <p>I thrive in collaborative environments where we push each other to learn and innovate.</p>
+            </div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet green"></span></div>
+            <div class="grid-title">Who I am</div>
+            <div class="grid-desc">
+              <p>A multi-tasking developer and ML enthusiast who loves building robust, data-centric systems.</p>
+              <p>A quick learner who treats every challenge—from a website to a model training issue—as a growth opportunity.</p>
+              <p>An active contributor in open source.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CODE SECTION -->
+    <section>
+      <h2><span class="toggle">[-]</span> /code</h2>
+      <div class="section-content">
+        <div class="grid-list">
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet blue"></span></div>
+            <div class="grid-title">Languages</div>
+            <div class="grid-desc"><p>python, C++</p></div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet green"></span></div>
+            <div class="grid-title">Databases</div>
+            <div class="grid-desc"><p>MongoDb, MySQL</p></div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet pink"></span></div>
+            <div class="grid-title">Front-end</div>
+            <div class="grid-desc"><p>html, css</p></div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet blue"></span></div>
+            <div class="grid-title">Libraries</div>
+            <div class="grid-desc"><p>numpy, pygame, PyTorch, tensorflow, pandas, opencv</p></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTRIBUTING SECTION -->
+    <section>
+      <h2><span class="toggle">[-]</span> CONTRIBUTING.md</h2>
+      <div class="section-content">
+        <div class="grid-list">
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet blue"></span></div>
+            <div class="grid-title">AppleCoreNet</div>
+            <div class="grid-desc"><p>Contributed to there sub module to improve model efficiency.</p></div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet pink"></span></div>
+            <div class="grid-title">ClickHouse</div>
+            <div class="grid-desc"><p>fixed a bug in query section.</p></div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet green"></span></div>
+            <div class="grid-title">freeCodeCamp</div>
+            <div class="grid-desc"><p>Added new section to there documentation.</p></div>
+          </div>
+
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet blue"></span></div>
+            <div class="grid-title">Facebook</div>
+            <div class="grid-desc"><p>Contributed pull requests to key open-source libraries, improving library documentation and overall stability.</p></div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bullet-container"><span class="bullet pink"></span></div>
+            <div class="grid-title">Other projects</div>
+            <div class="grid-desc"><p>Apart from these, I have a few academic projects and a few experiments which you can <a href="https://github.com/JithunMethusahan" target="_blank" rel="noopener noreferrer">view here</a>.</p></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <!-- GitHub Icon -->
+      <a href="https://github.com/JithunMethusahan" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      <!-- LinkedIn Icon -->
+      <a href="https://www.linkedin.com/in/jithunmethusahan/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      <!-- Mail Icon -->
+      <a href="mailto:work.jithun@gmail.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+      <!-- Document Icon (No link) -->
+      
+    </div>
+    
+    <button id="theme-toggle">Change to [Dark Mode]</button>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Theme Toggler Logic
+      const toggleThemeBtn = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        toggleThemeBtn.textContent = "Change to [Light Mode]";
+      }
+
+      toggleThemeBtn.addEventListener("click", () => {
+        const isDark = body.classList.toggle("dark-mode");
+        if (isDark) {
+          toggleThemeBtn.textContent = "Change to [Light Mode]";
+          localStorage.setItem("theme", "dark");
+        } else {
+          toggleThemeBtn.textContent = "Change to [Dark Mode]";
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // 2. Section Minimize / Maximize Toggler Logic
+      const toggleButtons = document.querySelectorAll(".toggle");
+
+      toggleButtons.forEach((btn) => {
+        btn.addEventListener("click", function() {
+          const sectionWrapper = this.closest("section");
+          const content = sectionWrapper.querySelector(".section-content");
+
+          if (content.style.display === "none") {
+            content.style.display = "block";
+            this.textContent = "[-]";
+          } else {
+            content.style.display = "none";
+            this.textContent = "[+]";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
